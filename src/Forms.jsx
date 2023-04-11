@@ -75,7 +75,7 @@ const Forms = (props) => {
 
     try {
 
-      const url = "http://localhost:3000/api/data/put";
+      const url = `${import.meta.env.VITE_APP_API_PATH}/data/put`;
       const { data: res } = await axios.post(url, {
         data: data,
         userId: data._id,
