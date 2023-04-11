@@ -20,7 +20,7 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `${import.meta.env.VITE_APP_API_PATH}/api/auth`;
+      const url = `${import.meta.env.VITE_APP_API_PATH}/auth`;
       const { data: res } = await axios.post(url, {...data});
       props.update(res);
       navigate("/forms");
