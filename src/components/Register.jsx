@@ -30,7 +30,7 @@ const Register = () => {
     e.preventDefault();
     try {
       console.log(data);
-      const url = "/api/users";
+      const url = "/users";
       const res = await axios.post(url,{...data});
       navigate("/login");
       console.log(res.data);
