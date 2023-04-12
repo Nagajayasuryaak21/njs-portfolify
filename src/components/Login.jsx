@@ -10,6 +10,7 @@ const Login = (props) => {
   const [data, setData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [msg,setMsg]= useState("Login");
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
@@ -19,6 +20,7 @@ const Login = (props) => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMsg("Please Wait ...")
     try {
       const url = `${import.meta.env.VITE_APP_API_PATH}/auth`;
       const { data: res } = await axios.post(url, {...data});
@@ -78,7 +80,7 @@ const Login = (props) => {
                 type="submit"
                 className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
               >
-                {"Login"}
+                {msg}
               </button>
             </form>
           </motion.div>
