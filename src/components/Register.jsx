@@ -31,7 +31,7 @@ const Register = () => {
     setMsg("Please Wait ...")
     try {
       console.log(data);
-      const url = "/users";
+      const url = `${import.meta.env.VITE_APP_API_PATH}/users`;
       const res = await axios.post(url,{...data});
       navigate("/login");
       console.log(res.data);
