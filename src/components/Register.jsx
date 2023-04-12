@@ -30,11 +30,11 @@ const Register = () => {
     e.preventDefault();
     setMsg("Please Wait ...")
     try {
-      console.log(data);
+      //console.log(data);
       const url = `${import.meta.env.VITE_APP_API_PATH}/users`;
       const res = await axios.post(url,{...data});
       navigate("/login");
-      console.log(res.data);
+      //console.log(res.data);
     } catch (error) {
       if (
         error.response &&
@@ -42,6 +42,7 @@ const Register = () => {
         error.response.status <= 500
       ) {
         setError(error.response.data.message);
+        alert(error.response.data.message);
         console.log(error);
       }
     }
