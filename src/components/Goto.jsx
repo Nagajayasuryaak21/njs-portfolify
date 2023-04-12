@@ -35,7 +35,7 @@ const Goto = (props) => {
               Here is your{" "}
               <span className="text-[#915EFF]">link</span>
             </h1>
-            <p>{window.location.origin+link}</p>
+            <p>{"https://njs-portfolify.vercel.app"+link}</p>
             <button
               onClick={handleSignUp}
               className="bg-tertiary py-3 px-[70px] rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary my-5"
