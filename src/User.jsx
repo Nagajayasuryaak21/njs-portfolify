@@ -24,7 +24,7 @@ const User = (params) => {
 
   useEffect(() => {
     if (id) {
-
+      console.log("Id",id);
       fetch(`${import.meta.env.VITE_APP_API_PATH}/api/data`, {
         method: "POST",
         headers: {
@@ -37,7 +37,7 @@ const User = (params) => {
           setData(newData);
           setIsLoading(false);
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {console.log(error);alert('some thing went wrong');navigate("/");});
     } else {
       //setData(datas);
       setIsLoading(false);
