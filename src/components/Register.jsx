@@ -17,7 +17,7 @@ const Register = () => {
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
+  const [msg,setMsg]= useState("Register");
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
@@ -28,6 +28,7 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMsg("Please Wait ...")
     try {
       console.log(data);
       const url = "/users";
@@ -114,7 +115,7 @@ const Register = () => {
                 type="submit"
                 className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
               >
-                {"Register"}
+                {msg}
               </button>
             </form>
           </motion.div>
