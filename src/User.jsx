@@ -25,7 +25,7 @@ const User = (params) => {
   useEffect(() => {
     if (id) {
       console.log("Id",id);
-      fetch(`${import.meta.env.VITE_APP_API_PATH}/api/data`, {
+      fetch(`${import.meta.env.VITE_APP_API_PATH}/data`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
