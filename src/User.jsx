@@ -32,8 +32,8 @@ const User = (params) => {
         },
         body: JSON.stringify({ userId: id }),
       })
-        .then((response) => response.json())
         .then((newData) => {
+          console.log(newData);
           setData(newData);
           setIsLoading(false);
         })
