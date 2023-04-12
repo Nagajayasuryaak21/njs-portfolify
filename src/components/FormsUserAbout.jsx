@@ -31,11 +31,11 @@ const FormsUserAbout = (props) => {
 
   return (
     <div
-      className={` flex items-center justify-center  flex-col-reverse gap-10 h-[100vh] `}
+      className={` flex items-center justify-center  flex-col-reverse gap-10 h-[100vh] sm:h-auto `}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl w-[70%] min-w-[200px]  max-w-[700px] mt-[70px]'
+        className='flex-[0.75] bg-black-100 p-8 rounded-2xl w-[70%] min-w-[200px]  max-w-[700px] mt-[70px] mb-[50px]'
       >
         <p className={styles.sectionSubText}>Create Portfolio</p>
         <h3 className={styles.sectionHeadText}>User Details</h3>
