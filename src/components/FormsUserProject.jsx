@@ -81,14 +81,14 @@ const FormsUserProject = (props) => {
 
     props.data.isProject = isProject;
     props.data.projects = projects;
-    props.aboutProject = aboutProject;
+    props.data.aboutProject = aboutProject;
     props.onSubmit(props.data);
     
   };
   const handleback = (e) => {
     props.data.isProject = isProject;
     props.data.projects = projects;
-    props.aboutProject = aboutProject;
+    props.data.aboutProject = aboutProject;
     props.onBack(props.data);
   };
 
