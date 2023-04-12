@@ -4,6 +4,8 @@ const { Data } = require("../models/data");
 const bcrypt = require("bcrypt");
 const Joi = require("joi");
 
+router.get("/",(req,res)=>{res.write("Hello");});
+
 router.post("/", async (req, res) => {
   try {
     console.log(req.body);
